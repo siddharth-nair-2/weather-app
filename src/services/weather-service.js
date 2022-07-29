@@ -79,6 +79,16 @@ const getFormattedWeatherData = async (searchParams) => {
   return { ...formattedCurrentWeather, ...formattedForecastWeather };
 };
 
+export const geoAPIOptions = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '9364d5bec5mshb61afb0294667e3p10eecdjsn5b59f1653ab8',
+		'X-RapidAPI-Host': 'wft-geo-db.p.rapidapi.com'
+	}
+};
+
+export const GEO_API_URL = "https://wft-geo-db.p.rapidapi.com/v1/geo"
+
 const formatToLocalTime = (
   secs,
   zone,
